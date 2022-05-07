@@ -17,6 +17,7 @@ const EventEmitterEventCount = require('@dwlib/event-emitter/EventEmitterEventCo
 const EventEmitterEvents = require('@dwlib/event-emitter/EventEmitterEvents');
 const EventEmitterListenerCount = require('@dwlib/event-emitter/EventEmitterListenerCount');
 const EventEmitterRemoveListener = require('@dwlib/event-emitter/EventEmitterRemoveListener');
+const IsEventEmitter = require('@dwlib/event-emitter/IsEventEmitter');
 // ESM
 import EventEmitter, {
   EventEmitterAddListener,
@@ -25,7 +26,8 @@ import EventEmitter, {
   EventEmitterEventCount,
   EventEmitterEvents,
   EventEmitterListenerCount,
-  EventEmitterRemoveListener
+  EventEmitterRemoveListener,
+  IsEventEmitter
 } from '@dwlib/event-emitter';
 import EventEmitterAddListener from '@dwlib/event-emitter/EventEmitterAddListener';
 import EventEmitterEmit from '@dwlib/event-emitter/EventEmitterEmit';
@@ -34,6 +36,7 @@ import EventEmitterEventCount from '@dwlib/event-emitter/EventEmitterEventCount'
 import EventEmitterEvents from '@dwlib/event-emitter/EventEmitterEvents';
 import EventEmitterListenerCount from '@dwlib/event-emitter/EventEmitterListenerCount';
 import EventEmitterRemoveListener from '@dwlib/event-emitter/EventEmitterRemoveListener';
+import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
 ```
 
 ## API

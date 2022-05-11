@@ -50,7 +50,6 @@ import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
   - listenerCount(event)
   - removeListener(event, listener)
 
-
 ### Builtins
 - EventEmitterAddListener(eventEmitter, event, listener[, options])
 - EventEmitterEmit(eventEmitter, event[, ...args])
@@ -59,3 +58,4 @@ import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
 - EventEmitterEvents(eventEmitter)
 - EventEmitterListenerCount(eventEmitter, event)
 - EventEmitterRemoveListener(eventEmitter, event, listener)
+- IsEventEmitter(argument)

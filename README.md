@@ -40,22 +40,26 @@ import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
 ```
 
 ## API
-- *class* EventEmitter
-  - constructor()
-  - *get* eventCount
-  - addListener(event, listener[, options])
-  - emit(event[, ...args])
-  - emitApply(event[, argumentsList])
-  - events()
-  - listenerCount(event)
-  - removeListener(event, listener)
+- `class EventEmitter`
+  - `constructor()`
+  - `get eventCount => number`
+  - `addListener(event: string | symbol, listener: Function[, options: {
+      once?: boolean
+    }?]) => this`
+  - `emit(event: string | symbol[, ...args: any[]?]) => boolean`
+  - `emitApply(event: string | symbol[, argumentsList: ArrayLike?]) => boolean`
+  - `events() => Array<string | symbol>`
+  - `listenerCount(event: string | symbol) => number`
+  - `removeListener(event: string | symbol, listener: Function) => boolean`
 
 ### Builtins
-- EventEmitterAddListener(eventEmitter, event, listener[, options])
-- EventEmitterEmit(eventEmitter, event[, ...args])
-- EventEmitterEmitApply(eventEmitter, event[, argumentsList])
-- EventEmitterEventCount(eventEmitter)
-- EventEmitterEvents(eventEmitter)
-- EventEmitterListenerCount(eventEmitter, event)
-- EventEmitterRemoveListener(eventEmitter, event, listener)
-- IsEventEmitter(argument)
+- `EventEmitterAddListener(eventEmitter: EventEmitter, event: string | symbol, listener: Function[, options: {
+    once?: boolean
+  }?]) => boolean`
+- `EventEmitterEmit(eventEmitter: EventEmitter, event: string | symbol[, ...args: any[]?]) => boolean`
+- `EventEmitterEmitApply(eventEmitter: EventEmitter, event: string | symbol[, argumentsList: ArrayLike?]) => boolean`
+- `EventEmitterEventCount(eventEmitter: EventEmitter) => number`
+- `EventEmitterEvents(eventEmitter: EventEmitter) => Array<string | symbol>`
+- `EventEmitterListenerCount(eventEmitter: EventEmitter, event: string | symbol) => number`
+- `EventEmitterRemoveListener(eventEmitter: EventEmitter, event: string | symbol, listener: Function) => boolean`
+- `IsEventEmitter(argument: any) => boolean`

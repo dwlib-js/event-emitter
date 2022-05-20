@@ -17,6 +17,7 @@ const EventEmitterEventCount = require('@dwlib/event-emitter/EventEmitterEventCo
 const EventEmitterEvents = require('@dwlib/event-emitter/EventEmitterEvents');
 const EventEmitterListenerCount = require('@dwlib/event-emitter/EventEmitterListenerCount');
 const EventEmitterRemoveListener = require('@dwlib/event-emitter/EventEmitterRemoveListener');
+const EventEmitterSubscribe = require('@dwlib/event-emitter/EventEmitterSubscribe');
 const IsEventEmitter = require('@dwlib/event-emitter/IsEventEmitter');
 // ESM
 import EventEmitter, {
@@ -36,6 +37,7 @@ import EventEmitterEventCount from '@dwlib/event-emitter/EventEmitterEventCount'
 import EventEmitterEvents from '@dwlib/event-emitter/EventEmitterEvents';
 import EventEmitterListenerCount from '@dwlib/event-emitter/EventEmitterListenerCount';
 import EventEmitterRemoveListener from '@dwlib/event-emitter/EventEmitterRemoveListener';
+import EventEmitterSubscribe from '@dwlib/event-emitter/EventEmitterSubscribe';
 import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
 ```
 
@@ -51,6 +53,9 @@ import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
   - `events() => Array<string | symbol>`
   - `listenerCount(event: string | symbol) => number`
   - `removeListener(event: string | symbol, listener: Function) => boolean`
+  - `subscribe(event: string | symbol, listener: Function[, options: {
+      once?: boolean
+    }?]) => unsubscribe() => boolean`
 
 ### Builtins
 - `EventEmitterAddListener(eventEmitter: EventEmitter, event: string | symbol, listener: Function[, options: {
@@ -62,4 +67,7 @@ import IsEventEmitter from '@dwlib/event-emitter/IsEventEmitter';
 - `EventEmitterEvents(eventEmitter: EventEmitter) => Array<string | symbol>`
 - `EventEmitterListenerCount(eventEmitter: EventEmitter, event: string | symbol) => number`
 - `EventEmitterRemoveListener(eventEmitter: EventEmitter, event: string | symbol, listener: Function) => boolean`
+- `EventEmitterSubscribe(eventEmitter: EventEmitter, event: string | symbol, listener: Function[, options: {
+    once?: boolean
+  }?]) => unsubscribe() => boolean`
 - `IsEventEmitter(argument: any) => boolean`
